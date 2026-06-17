@@ -5,6 +5,7 @@
 This project explores the evolution of traditional Retrieval-Augmented Generation (RAG) systems toward more autonomous and flexible agentic architectures.
 
 Starting from a modular implementation of a Naive RAG pipeline, individual components are transformed into callable tools that can be orchestrated dynamically by an LLM-based agent. Additionally, query rewriting mechanism ia incorporated to improve retrieval quality.
+
 ---
 
 ## Design Principles
