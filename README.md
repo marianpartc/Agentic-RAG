@@ -65,7 +65,7 @@ The orchestrator agent operates as a dynamic router utilizing a strict **Classif
    * **`GENERAL KNOWLEDGE`:** Standard questions outside the document's scope.
    * **`SMALL TALK`:** Greetings and casual interactions.
 
-2. **Dynamic Routing (Decision Rules):**
+2. **Dynamic Routing/Decision Rules:**
    * **Retrieval Trigger:** Initiates the `retrieve` tool *only* if the intent is `DOCUMENT-BASED` and no prior context has been gathered.
    * **Query Refinement:** If the user query is ambiguous or unclear, the agent triggers the `rewrite` tool to optimize the search terms before attempting retrieval.
    * **Direct Response Generation:** For `GENERAL KNOWLEDGE` or `SMALL TALK`, it bypasses retrieval and routes directly to the `generate` tool.
@@ -95,20 +95,6 @@ Generates alternative formulations of the user's question to improve retrieval q
 ### Agent
 
 Coordinates the execution of tools and determines the next action to perform.
-
----
-
-
-## Future Work
-
-Possible extensions include:
-
-* Memory mechanisms
-* Planning agents
-* Multimodal retrieval
-* Benchmarking against standard RAG baselines
-* Human-in-the-loop evaluation
-* Multi-agent systems
 
 ---
 
