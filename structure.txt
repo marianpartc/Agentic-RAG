@@ -1,0 +1,72 @@
+rag_proyecto/
+│
+├── .gitignore
+├── LICENSE
+├── README.md
+├── requirements.txt
+├── structure.txt
+├── pyproject.toml                 # o setup.py
+│
+├── data/                          # datos
+│   ├── raw/                       # datos originales (repos)
+│   ├── processed/                 # datos preprocesados (embeddings)
+│   └── samples/                   # datos de ejemplos
+│
+├── notebooks/                     # Notebooks (Jupyter)
+│   ├── 01_notebook.ipynb
+│   └── 02_notebook.ipynb
+│
+├── src/                           # código fuente
+│   ├── __init__.py
+│   ├── config.py                  # configuración general
+│   ├── main.py                    # script de ejecución principal
+│   │
+│   ├── indexing/                  # procesamiento e indexación de documentos
+│   │   ├── __init__.py
+│   │   │
+│   │   ├── loaders/               # carga de documentos
+│   │   │   └── pdf_loader.py
+│   │   │
+│   │   ├── processors/            # procesamiento de texto
+│   │   │   ├── metadata_extractor.py
+│   │   │   ├── text_enricher.py
+│   │   │   └── tagger.py
+│   │   │
+│   │   ├── splitters/             # división de texto
+│   │   │   └── text_splitter.py
+│   │   │
+│   │   └── document_processor.py  # pipeline principal de procesamiento
+│   │
+│   ├── retrieval/                 # módulo de recuperación
+│   │   ├── __init__.py
+│   │   ├── base_retriever.py      # interfaz abstracta
+│   │   ├── vector_store.py        # FAISS u otra DB vectorial
+│   │   ├── embedding_provider.py  # generación de embeddings
+│   │   └── naive_retriever.py     # implementación concreta
+│   │
+│   ├── generation/                # módulo generativo (LLM)
+│   │   ├── __init__.py
+│   │   ├── base_generator.py
+│   │   ├── openai_generator.py
+│   │   ├── local_generator.py
+│   │   └── generator_factory.py   # activa al generador elegido en config
+│	
+├── tests/                         # pruebas unitarias
+│   ├── __init__.py
+│   └── test_retriever.py
+│
+├── configs/                       # archivos YAML/JSON de configuración
+│   └── default_config.yaml
+│
+├── images/                        # imagenes
+│   └── arquitectura.png
+│
+├── docs/                          # documentación del proyecto
+│   ├── arquitectura.md
+│   ├── flujo_rag.md
+│   └── api.md
+│
+└── results/                       # resultados experimentales
+    ├── logs/
+    ├── metrics/
+    └── outputs/
