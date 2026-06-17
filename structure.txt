@@ -50,6 +50,18 @@ rag_proyecto/
 │   │   ├── openai_generator.py
 │   │   ├── local_generator.py
 │   │   └── generator_factory.py   # activa al generador elegido en config
+│   │
+│   ├── agent/                # módulo agentico
+│   │   ├── prompts/
+│   │   ├── __init__.py
+│   │   └── agent_prompt.py
+│   │   ├── tools/
+│   │   ├── __init__.py
+│   │   ├── generation_tool.py
+│   │   ├── retrieval_tool.py
+│   │   └── rewrite_tool.py
+│   ├── __init__.py
+│   └── orchestrator.py
 │	
 ├── tests/                         # pruebas unitarias
 │   ├── __init__.py
