@@ -1,4 +1,4 @@
-# Agentic RAG: From Naive to Iterative Retrieval
+# Agentic RAG
 
 ## Overview
 
